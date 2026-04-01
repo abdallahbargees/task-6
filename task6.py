@@ -1,14 +1,15 @@
-import pandas as pd
+import numpy as np
 
-students_data = pd.DataFrame({
-    "Name": ["Alice", "Bob", "Charlie", "David", "Eva"],
-    "Age": [20, 22, 19, 21, 20],
-    "Grade": ["A", "B", "A", "C", "B"],
-    "Marks": [85, 78, 92, 65, 74]
-})
+A = np.array([10, 20, 30, 40, 50])
+B = np.array([5, 4, 3, 2, 1])
 
-print(students_data.head(3))
-print()
-print(students_data[["Name", "Marks"]])
-print()
-print(students_data[students_data["Grade"] == "A"])
+print("A + B =", A + B)
+print("A - B =", A - B)
+print("A * B =", A * B)
+print("A / B =", A / B)
+
+print("\nMean of A:", np.mean(A))
+print("Max of A:", np.max(A))
+print("Min of A:", np.min(A))
+print("Dot product of A and B:", np.dot(A, B))
+print("Reshaped A:\n", A.reshape(5, 1))
