@@ -1,15 +1,12 @@
-import numpy as np
+import matplotlib.pyplot as plt
 
-A = np.array([10, 20, 30, 40, 50])
-B = np.array([5, 4, 3, 2, 1])
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+temperature = [30, 32, 31, 29, 33, 35, 34]
 
-print("A + B =", A + B)
-print("A - B =", A - B)
-print("A * B =", A * B)
-print("A / B =", A / B)
+plt.plot(days, temperature)
 
-print("\nMean of A:", np.mean(A))
-print("Max of A:", np.max(A))
-print("Min of A:", np.min(A))
-print("Dot product of A and B:", np.dot(A, B))
-print("Reshaped A:\n", A.reshape(5, 1))
+plt.xlabel("Days of the Week")
+plt.ylabel("Temperature (°C)")
+plt.title("Temperature Variation Over a Week")
+
+plt.show()
